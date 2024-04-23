@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,552 +9,602 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<style>
-    /* buttons */
+    <style>
+        /* buttons */
 
-.btn { width: 40%; margin-left: 27%; height: 15vh; text-align: center;
-    
-    position: relative;
-    padding: 2rem 4.2rem;
-    padding-right: 3.1rem;
-    font-size: 2rem;
-    color: var(--inv);
-    letter-spacing: 0.1rem;
-    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
-    cursor: pointer;
-    user-select: none;
-    font-family:'Times New Roman', Times, serif;
-    
-    }
 
-    
-    .btn:before, .btn:after {
-    content: '';
-    position: absolute;
-    transition: inherit;
-    z-index: -1;
-    }
-    
-    .btn:hover {
-    color: #5b6066;
-    transition-delay: .5s;
-    }
-    
-    .btn:hover:before {
-    transition-delay: 0s;
-    }
-    
-    .btn:hover:after {
-    background: var(--inv);
-    transition-delay: .35s;
-    }
-    
-    /* From Top */
-    
-    .from-top:before, 
-    .from-top:after {
-    left: 0;
-    height: 0;
-    width: 100%;
-    }
-    
-    .from-top:before {
-    bottom: 0;
-    border: 1px solid var(--inv);
-    border-top: 0;
-    border-bottom: 0;
-    }
-    
-    .from-top:after {
-    top: 0;
-    height: 0;
-    }
-    
-    .from-top:hover:before,
-    .from-top:hover:after {
-    height: 100%;
-    }
-    
-    /* From Left */
-    
-    .from-left:before, 
-    .from-left:after {
-    top: 0;
-    width: 0;
-    height: 100%;
-    }
-    
-    .from-left:before {
-    right: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-left:after {
-    left: 0;
-    }
-    
-    .from-left:hover:before,
-    .from-left:hover:after {
-    width: 100%;
-    }
-    
-    /* From Right */
-    
-    .from-right:before, 
-    .from-right:after {
-    top: 0;
-    width: 0;
-    height: 100%;
-    }
-    
-    .from-right:before {
-    left: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-right:after {
-    right: 0;
-    }
-    
-    .from-right:hover:before,
-    .from-right:hover:after {
-    width: 100%;
-    }
-    
-    /* From center */
-    
-    .from-center:before {
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-center:after {
-    bottom: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    background: var(--inv);
-    }
-    
-    .from-center:hover:before {
-    left: 0;
-    width: 100%;
-    }
-    
-    .from-center:hover:after {
-    top: 0;
-    height: 100%;
-    }
-    
-    
-  
-    
-    body {
-        --def: #96B7C4; 
-        --inv: #fff;
-        background-color: #2f4353;
-        background-image: linear-gradient(315deg, #19547b 5%, #ffd89b 75%);
-    
+        #btncontainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-  .mbtn{text-decoration: none; color: white;}
-  .mbtn:hover{text-decoration: none; color: black; }
+        .btn {
+            width: 40%;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 2rem 4.2rem;
+            padding-right: 3.1rem;
+            font-size: 2rem;
+            color: var(--inv);
+            letter-spacing: 0.1rem;
+            transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+            cursor: pointer;
+            user-select: none;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
 
 
- #btcontainer{height: auto;}
+        .btn:before,
+        .btn:after {
+            content: '';
+            position: absolute;
+            transition: inherit;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: #5b6066;
+            transition-delay: .5s;
+        }
+
+        .btn:hover:before {
+            transition-delay: 0s;
+        }
+
+        .btn:hover:after {
+            background: var(--inv);
+            transition-delay: .35s;
+        }
+
+        /* From Top */
+
+        .from-top:before,
+        .from-top:after {
+            left: 0;
+            height: 0;
+            width: 100%;
+          
+        }
+
+        .from-top:before {
+            bottom: 0;
+            border: 1px solid var(--inv);
+            border-top: 0;
+            border-bottom: 0;
+           
+        }
+
+        .from-top:after {
+            top: 0;
+            height: 0;
+        
+        }
+
+        .from-top:hover:before,
+        .from-top:hover:after {
+            height: 100%;
+        }
+
+        /* From Left */
+
+        .from-left:before,
+        .from-left:after {
+            top: 0;
+            width: 0;
+            height: 100%;
+        }
+
+        .from-left:before {
+            right: 0;
+            border: 1px solid var(--inv);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        .from-left:after {
+            left: 0;
+        }
+
+        .from-left:hover:before,
+        .from-left:hover:after {
+            width: 100%;
+        }
+
+        /* From Right */
+
+        .from-right:before,
+        .from-right:after {
+            top: 0;
+            width: 0;
+            height: 100%;
+        }
+
+        .from-right:before {
+            left: 0;
+            border: 1px solid var(--inv);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        .from-right:after {
+            right: 0;
+        }
+
+        .from-right:hover:before,
+        .from-right:hover:after {
+            width: 100%;
+        }
+
+        /* From center */
+
+        .from-center:before {
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 0;
+            border: 1px solid var(--inv);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        .from-center:after {
+            bottom: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            background: var(--inv);
+        }
+
+        .from-center:hover:before {
+            left: 0;
+            width: 100%;
+        }
+
+        .from-center:hover:after {
+            top: 0;
+            height: 100%;
+        }
+
+
+
+
+        body {
+            --def: #96B7C4;
+            --inv: #fff;
+            background-color: #2f4353;
+            background-image: linear-gradient(315deg, #19547b 5%, #ffd89b 75%);
+
+        }
+
+        .mbtn {
+            text-decoration: none;
+            color: white;
+           
+        }
+
+        .mbtn:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        #btcontainer {
+            height: auto;
+        }
 
         /*Shrinking for mobile*/
-@media (max-width: 768px ) {
-    body{
-        margin: 0;
-        padding: 0;
-        --def: #96B7C4; 
-        --inv: #fff;
-        background-color: #2f4353;
-        background-image: linear-gradient(315deg, #19547b 5%, #ffd89b 75%);
-    }
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:20px;
-    
-  }
-  #support{ float: left;  font-size: 14px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-  }
-  .btn { width: 80%; margin-left: 9%; height: 15vh; text-align: center;
-    
-    position: relative;
-    padding:  1rem;
-    padding-top: 2.5rem;
-    font-size: 20px;
-    color: var(--inv);
-    letter-spacing: 0.1rem;
-    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
-    cursor: pointer;
-    user-select: none;
-    font-family:'Times New Roman', Times, serif;
-    
-    }
+        @media (max-width: 768px) {
+            body {
+                margin: 0;
+                padding: 0;
+                --def: #96B7C4;
+                --inv: #fff;
+                background-color: #2f4353;
+                background-image: linear-gradient(315deg, #19547b 5%, #ffd89b 75%);
+            }
 
-    .btn:before, .btn:after {
-    content: '';
-    position: absolute;
-    transition: inherit;
-    z-index: -1;
-    }
+            .waves {
+                height: 40px;
+                min-height: 40px;
+            }
 
-    .btn:hover {
-    color: #5b6066;
-    transition-delay: .5s;
-    }
-    
-    
-    .btn:hover:before {
-    transition-delay: 0s;
-    }
-    
-    .btn:hover:after {
-    background: var(--inv);
-    transition-delay: .35s;
-    }
-    
-    /* From Top */
-    
-    .from-top:before, 
-    .from-top:after {
-    left: 0;
-    height: 0;
-    width: 100%;
+            .content {
+                height: 30vh;
+            }
 
-    }
-    
-    .from-top:before {
-    bottom: 0;
-    border: 1px solid var(--inv);
-    border-top: 0;
-    border-bottom: 0;
-    }
-    
-    .from-top:after {
-    top: 0;
-    height: 0;
-    }
-    
-    .from-top:hover:before,
-    .from-top:hover:after {
-    height: 100%;
-    }
-    
-    /* From Left */
-    
-    .from-left:before, 
-    .from-left:after {
-    top: 0;
-    width: 0;
-    height: 100%;
-    }
-    
-    .from-left:before {
-    right: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-left:after {
-    left: 0;
-    }
-    
-    .from-left:hover:before,
-    .from-left:hover:after {
-    width: 100%;
-    }
-    
-    /* From Right */
-    
-    .from-right:before, 
-    .from-right:after {
-    top: 0;
-    width: 0;
-    height: 100%;
-    }
-    
-    .from-right:before {
-    left: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-right:after {
-    right: 0;
-    }
-    
-    .from-right:hover:before,
-    .from-right:hover:after {
-    width: 100%;
-    }
-    
-    /* From center */
-    
-    .from-center:before {
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 0;
-    border: 1px solid var(--inv);
-    border-left: 0;
-    border-right: 0;
-    }
-    
-    .from-center:after {
-    bottom: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    background: var(--inv);
-    }
-    
-    .from-center:hover:before {
-    left: 0;
-    width: 100%;
-    }
-    
-    .from-center:hover:after {
-    top: 0;
-    height: 100%;
-    }
-}
+            h1 {
+                font-size: 20px;
 
-    
-</style>
+            }
+
+            #support {
+                float: left;
+                font-size: 14px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            }
+
+
+            #btncontainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .btn {
+                width: 80%;
+                height: 15vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                padding: 1rem;
+                font-size: 1.5rem;
+                color: var(--inv);
+                letter-spacing: 0.1rem;
+                transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+                cursor: pointer;
+                user-select: none;
+                font-family: 'Times New Roman', Times, serif;
+
+            }
+
+            .btn:before,
+            .btn:after {
+                content: '';
+                position: absolute;
+                transition: inherit;
+                z-index: -1;
+            }
+
+            .btn:hover {
+                color: #5b6066;
+                transition-delay: .5s;
+            }
+
+
+            .btn:hover:before {
+                transition-delay: 0s;
+            }
+
+            .btn:hover:after {
+                background: var(--inv);
+                transition-delay: .35s;
+            }
+
+            /* From Top */
+
+            .from-top:before,
+            .from-top:after {
+                left: 0;
+                height: 0;
+                width: 100%;
+
+            }
+
+            .from-top:before {
+                bottom: 0;
+                border: 1px solid var(--inv);
+                border-top: 0;
+                border-bottom: 0;
+            }
+
+            .from-top:after {
+                top: 0;
+                height: 0;
+              
+            }
+
+            .from-top:hover:before,
+            .from-top:hover:after {
+                height: 100%;
+            }
+
+            /* From Left */
+
+            .from-left:before,
+            .from-left:after {
+                top: 0;
+                width: 0;
+                height: 100%;
+            }
+
+            .from-left:before {
+                right: 0;
+                border: 1px solid var(--inv);
+                border-left: 0;
+                border-right: 0;
+            }
+
+            .from-left:after {
+                left: 0;
+            }
+
+            .from-left:hover:before,
+            .from-left:hover:after {
+                width: 100%;
+            }
+
+            /* From Right */
+
+            .from-right:before,
+            .from-right:after {
+                top: 0;
+                width: 0;
+                height: 100%;
+            }
+
+            .from-right:before {
+                left: 0;
+                border: 1px solid var(--inv);
+                border-left: 0;
+                border-right: 0;
+            }
+
+            .from-right:after {
+                right: 0;
+            }
+
+            .from-right:hover:before,
+            .from-right:hover:after {
+                width: 100%;
+            }
+
+            /* From center */
+
+            .from-center:before {
+                top: 0;
+                left: 50%;
+                height: 100%;
+                width: 0;
+                border: 1px solid var(--inv);
+                border-left: 0;
+                border-right: 0;
+            }
+
+            .from-center:after {
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                background: var(--inv);
+            }
+
+            .from-center:hover:before {
+                left: 0;
+                width: 100%;
+            }
+
+            .from-center:hover:after {
+                top: 0;
+                height: 100%;
+            }
+           
+        }
+    </style>
 
 </head>
+
 <body>
 
     <div class="header">
-       
-        
-       
-                   
-            
+
         <!--Content before waves-->
         <div class="inner-header flex">
             <div id="support">
-            <h2>supporting people with disabilites</h2>
-        </div>
+                <h2><a href="index.html" style="color: white;">supporting people with disabilites</a></h2>
+            </div>
             <!--Just the logo.. Don't mind this-->
-<svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
-<path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
-<g><path fill="#fff"
-d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+            <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+                <g>
+                    <path fill="#fff"
+                        d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
 C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
 c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
-</g>
-</svg>
+                </g>
+            </svg>
 
 
-<h1>Able foundation</h1>
+            <h1>Able foundation</h1>
 
 
         </div>
         <div id="links">
-                <ul> 
-                    <li class="headlist">
-                <a href="index.html"  > <b>i am  </b></a>
-            </li>
-            <li class="headlist" > 
-                 <a href="services.html"> <b>services  </b> </a> 
-            
-            <li class="headlist" >
-                <a href="contact.html"> <b>contact  </b> </a>
-            </li>
-            <li class="headlist">
-                <a href="about.html"> <b>about </b> </a>
-               
-            </li>
-            <li class="headlist">
-                <a href="reg-page222.html"> <b>Log in </b> </a>
-               
-            </li>
+            <ul id="linksMob">
+                <li class="headlist">
+                    <a href="index.html"> <b>i am </b></a>
+                </li>
+                <li class="headlist">
+                    <a href="services.html"> <b>services </b> </a>
+
+                <li class="headlist">
+                    <a href="contact.html"> <b>contact </b> </a>
+                </li>
+                <li class="headlist">
+                    <a href="about.html"> <b>about </b> </a>
+
+                </li>
+                <li class="headlist">
+                    <a href="reg-page222.html"> <b>Log in </b> </a>
+
+                </li>
             </ul>
-            </div>
-        
+        </div>
+
         <!--Waves Container-->
-<div>
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-    <defs>
-    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-    </defs>
-    <g class="parallax">
-    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-    </g>
-    </svg>
-    </div>
-    <!--Waves end-->
-    
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+
     </div>
     <!--Header ends-->
-    
+
     <div class="carePic" style="background-image: url(social2.jpg)">
     </div>
- 
-<div id="btncontainer">
-    <div class="btn from-top"> <a href="services.html" class="mbtn" ><b> i'm a person with a disability </b> </a> </div>
-<div class="btn from-left"> <a href="member.html" class="mbtn" ><b>i'm a family member or a carer </b> </a></div>
-<div class="btn from-right"><a href="pro.html" class="mbtn"><b> i'm a health professional </b> </a>  </div>
-<div class="btn from-center">  <a href="involved.html" class="mbtn" ><b> i want to get involved </b> </a> </div>
-</div>
+
+    <div id="btncontainer">
+        <div class="btn from-top"> <a href="services.html" class="mbtn"><b > i'm a person with a disability </b> </a>
+        </div>
+        <div class="btn from-left"> <a href="member.html" class="mbtn"><b>i'm a family member or a carer </b> </a></div>
+        <div class="btn from-right"><a href="pro.html" class="mbtn"><b> i'm a health professional </b> </a> </div>
+        <div class="btn from-center"> <a href="involved.html" class="mbtn"><b> i want to get involved </b> </a> </div>
+    </div>
 
 
-<footer class="footer-section">
-    <div class="container">
-        <div class="footer-cta pt-5 pb-5">
-            <div class="row">
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="cta-text">
-                            <h4>Find us</h4>
-                            <span>1010 Avenue, sw 54321, chandigarh</span>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="fas fa-phone"></i>
-                        <div class="cta-text">
-                            <h4>Call us</h4>
-                            <span>9876543210 0</span>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="far fa-envelope-open"></i>
-                        <div class="cta-text">
-                            <h4>Mail us</h4>
-                            <span>ِAble@info.com</span>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>ِAble@info.com</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-content pt-5 pb-5"> 
-            <svg version="1.1" class="logo"  baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
-                <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
-                <g><path fill="#fff"
-                d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+            <div class="footer-content pt-5 pb-5">
+                <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500"
+                    xml:space="preserve">
+                    <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+                    <g>
+                        <path fill="#fff"
+                            d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
                 C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
                 c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
-                </g>
+                    </g>
                 </svg>
-           
-            <div class="row">
-                
-                <div class="col-xl-4 col-lg-4 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html"></a>
-                        </div>
-                        <div class="footer-text">
 
-                        
+                <div class="row">
 
-                            <p>A world where each person with a disability can live their best life.</p>
-                        </div>
-                        <div class="footer-social-icon">
-                            <span>Follow us</span>
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                            <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter twitter-bg"></i></a>
-                            <a href="https://www.google.com/"><i class="fab fa-google-plus-g google-bg"></i></a>
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+
+
+
+                                <p>A world where each person with a disability can live their best life.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="https://www.google.com/"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Useful Links</h3>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">about</a></li>
+                                <li><a href="services.html">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="services.html">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="">Contact us</a></li>
+                                <li><a href="index.html">Latest News</a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="services.html">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="#">Expert Team</a></li>
-                            <li><a href="">Contact us</a></li>
-                            <li><a href="index.html">Latest News</a></li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Subscribe</h3>
-                        </div>
-                        <div class="footer-text mb-25">
-                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                        </div>
-                        <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="fab fa-telegram-plane"></i></button>
-                            </form>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2018, All Right Reserved</p>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2018, All Right Reserved</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
- 
+    </footer>
+
 </body>
+
 </html>
